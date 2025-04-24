@@ -44,3 +44,12 @@ for ticker, name in magnificent_7.items():
         st.line_chart(df[['Close', 'MA20', 'MA50']])
     except Exception as e:
         st.warning(f"{name} 데이터 로드 실패: {e}")
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
